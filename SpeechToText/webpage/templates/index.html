@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Call Quality Check</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f5f5f5;
+      text-align: center;
+      margin: 50px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #333;
+      text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    input[type="file"] {
+      display: block;
+      width: 95%;
+      margin-bottom: 15px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: #fff;
+      text-align: center;
+    }
+
+    input[type="submit"] {
+      background-color: #cf0000;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Upload Call Recording</h1>
+  <form action="/upload" method="post" enctype="multipart/form-data">
+    <input type="file" name="file" accept=".wav">
+    <br>
+    <input type="submit" value="Upload and Get Quality Check">
+  </form>
+</body>
+</html>
